@@ -1,6 +1,6 @@
 # DynamodbBackupParser
 
-TODO: Write a gem description
+DynamodbBackupParser is a parser for dynamodb backup file.
 
 ## Installation
 
@@ -20,7 +20,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+DyanmoDB Backup file
+
+see: [http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-importexport-ddb-pipelinejson-verifydata2.html
+  ](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-importexport-ddb-pipelinejson-verifydata2.html
+  )
+
+```
+foo[ETX]{"n":"1"}[STX]bar[ETX]{"s":"test"}
+foo[ETX]{"n":"2.3"}[STX]bar[ETX]{"s":"test2"}
+```
+
+```ruby
+DynamodbBackupParser.parse(BACKUP_FILE)
+# ->
+[
+  { "foo" => 1.0, "bar" => "test" },
+  { "foo" => 2.3, "bar" => "test2" },
+]
+```
+
 
 ## Contributing
 

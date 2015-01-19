@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Yoshiori SHOJI"]
   spec.email         = ["yoshiori@gmail.com"]
   spec.summary       = %q{DynamodbBackupParser is a parser for dynamodb backup file.}
-  spec.description   = %q{DynamodbBackupParser is a parser for dynamodb backup file}
+  spec.description   = %q{DynamodbBackupParser is a parser for dynamodb backup file.}
   spec.homepage      = "https://github.com/yoshiori/dynamodb_backup_parser"
   spec.license       = "MIT"
 
